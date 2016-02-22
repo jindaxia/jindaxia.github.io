@@ -82,25 +82,25 @@ featured-condition-size: 1              # A tag will be featured if the size of 
 # Friends
 friends: [
     {
-        title: "天镶的博客",
-        href: "http://lingyu.wang/"
+        title: "d",
+        href: "#"
     },{
-        title: "Luke的自留地",
-        href: "http://hmqk1995.github.io"
+        title: "d",
+        href: "#"
     },{
-        title: "Ebn's Blog",
-        href: "http://ebnbin.com/"
+        title: "d",
+        href: "#"
     },{
-        title: "SmdCn's Blog",
-        href: "http://blog.smdcn.net"
+        title: "dg",
+        href: "#"
     },{
-        title: "解旻的博客",
-        href: "http://xieminis.me/"
+        title: "d",
+        href: "#"
     },{
-        title: "DHong Say",
-        href: "http://dhong.co"
+        title: "d d",
+        href: "#"
     },{
-        title: "尹峰以为",
-        href: "http://ingf.github.io/"
+        title: "d",
+        href: "@"
     }
 ]
