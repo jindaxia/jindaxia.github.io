@@ -15,7 +15,7 @@ RSS: false
 weibo_username: jin777
 # zhihu_username: jindaxia
 github_username: jindaxia
-twitter_username: xiagege
+twitter_username: jindaxia
 # facebook_username:  huxpro
 
 
@@ -88,6 +88,6 @@ service-worker: true
 friends: [
     {
         title: "虾哥哥Blog",
-        href: "jindaxia.github.io"
+        href: "https://jindaxia.github.io"
     },
 ]
