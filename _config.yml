@@ -55,7 +55,10 @@ kramdown:
 #disqus_username: _your_disqus_short_name_
 
 # gitment settings
-gitment: true
+gitment: false
+
+utterances: true
+utterances-repo: jindaxia/jindaxia.github.io
 
 
 # Analytics settings
