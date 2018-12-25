@@ -10,16 +10,16 @@ tags: [Gitment, utterance]
 
 > Gitment无缝迁移到utterance
 
-考虑到Gitment的安全性[争议]:https://blog.wolfogre.com/posts/security-problem-of-gitment/
+考虑到Gitment的安全性[争议]:(https://blog.wolfogre.com/posts/security-problem-of-gitment/)
 
 决定把评论系统迁移到同样基于github Issue系统的 
 
-[utterance]:https://www.xianmin.org/post/utterances-comment-system/
+[utterance]:(https://www.xianmin.org/post/utterances-comment-system/)
 
 ## utterance的使用方法
 
-1. 在需要创建评论的repo上安装 utterance的apps ，https://github.com/apps/utterances
-2. 页面增加一个<script>代码段
+1. 在需要创建评论的repo上安装 utterance的[apps]:(https://github.com/apps/utterances) 
+2. 页面增加一个"<script>"代码段
 
 ```js
 <script src="https://utteranc.es/client.js"
