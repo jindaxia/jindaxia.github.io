@@ -9,20 +9,22 @@
     {% endif %}
     <h5><a href="{{'/archive/' | prepend: site.baseurl }}">FEATURED TAGS</a></h5>
     <div class="tags">
-        {% capture tags %}
-        {% comment %}
-            there must be no space between for and if otherwise this tricky sort won't work.
-            url_encode/decode is for escaping otherwise extra <a> will get generated 
-            but it will break sort...
-        {% endcomment %}
-        {% for tag in site.tags %}{% if tag[1].size > site.featured-condition-size %}
-                <a data-sort="{{ site.posts.size | minus: tag[1].size | prepend: '0000' | slice: -4, 4 }}" 
-                    href="{{ site.baseurl }}/archive/?tag={{ tag[0] | url_encode }}"
-                    title="{{ tag[0] }}"
-                    rel="{{ tag[1].size }}">{{ tag[0] }}</a>
-        {% endif %}{% endfor %}
-        {% endcapture %}
-        {{ tags | split:'</a>' | sort | join:'</a>' }}
+    {%- capture tags -%}
+    {% for tag in site.tags %}
+        {{ tag[1].size | plus: -10000 }}###{{ tag[0] | replace: ' ', '##' }}###{{ tag[1].size }}
+    {% endfor %}
+    {%- endcapture -%}
+    {% assign sorted_tags = tags | split: ' ' | sort %}
+    {%- for sorted_tag in sorted_tags -%}
+        {% assign items = sorted_tag | split: '###' %}
+        {% assign tag = items[1] | replace: '##', ' ' %}
+        {% assign count = items[2] | plus: 0 %}
+        {%- if count > site.featured-condition-size -%}
+        <a class="tag-link" href="{{ site.baseurl }}/archive/?tag={{ tag | url_encode }}" rel="{{ count }}">
+            {{ tag }}
+        </a>
+        {%- endif -%}
+    {%- endfor %}
     </div>
 </section>
 {% endif %}
